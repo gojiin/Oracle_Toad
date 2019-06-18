@@ -1,0 +1,13 @@
+--DB링크 설정 
+CREATE DATABASE LINK JI5_LINK --링크명 내 맘대로 설정
+CONNECT TO KOPO2019 --내가 가져오려고 하는 테이블이 있는 계정의 ID
+IDENTIFIED BY kopo2019 --PW
+USING 'DEV_KOPO'; --가져오려 하는 테이블이 존재하는 서버명
+
+CREATE TABLE KOPO_PRODUCT_VOLUME_ji10
+AS SELECT * FROM KOPO_PRODUCT_VOLUME@JI5_LINK;
+
+select * from KOPO_PRODUCT_VOLUME_ji10
+
+
+
